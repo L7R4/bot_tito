@@ -1,14 +1,14 @@
 # TELEGRAM BOT 🤖
-**It is a telegram bot to forward messages from a group / channel to another**
+**It is a telegram bot to resent messages from a group / channel to another**
 
 ### INSTALATION 📃
-The dependencys is in file **requiments.txt**👆
+The requirements are in the file. **requirements.txt**👆
 For download:
 *(venv)$ pip install -r requirements.txt*
 
 ### HOW USE ⚙
-Add your bot in the two groups/ channels que quieras usar
-And colocar your token en donde dice YOUR_TOKEN and done.
+Add your BOT in 2 groups or channels you want to use
+And place your TOKEN where you say YOUR_TOKEN, execute and done
 
 ### LICENSE 📕
 MIT
