@@ -18,7 +18,7 @@ def process_message(update,context):
 
 
 def run():
-    updater = Updater(token="5076850110:AAHLAvi4scMP4RwZ6W5TOsEYENebjSNHSsw", use_context = True)
+    updater = Updater(token="YOUR_TOKEN", use_context = True)
 
     
     dp = updater.dispatcher
