@@ -1,9 +1,4 @@
-
-
 from telegram.ext import Updater, MessageHandler,Filters
-
-def start(update,context):
-    update.message.reply_text("Hola pibe")
 
 def process_message(update,context):
 
