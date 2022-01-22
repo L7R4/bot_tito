@@ -1,5 +1,6 @@
 from telegram.ext import Updater, MessageHandler,Filters
 
+#Funcion donde se reenvia el mensaje
 def process_message(update,context):
 
     text = update.message.text
@@ -13,13 +14,17 @@ def process_message(update,context):
 
 
 def run():
-    updater = Updater(token="YOUR_TOKEN", use_context = True)
+    #Donde colocar el token
+    updater = Updater(token="YOUR_TOKEN", use_context = True) 
 
-    
-    dp = updater.dispatcher
-    dp.add_handler(MessageHandler(filters=Filters.all ,callback=process_message))
+    #El dispacher para poder utilizar toda la informacion que pasa por el update
+    dp = updater.dispatcher 
 
-    updater.start_polling()
+    #Donde se agrega un manejador de mensajes con el callback de la funcion de arriba
+    dp.add_handler(MessageHandler(filters=Filters.all ,callback=process_message)) 
+
+    #Para que el bot una vez iniciado no se detenga
+    updater.start_polling() 
     print("Bot is polling")
     updater.idle()
 
