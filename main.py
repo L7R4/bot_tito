@@ -1,21 +1,23 @@
+from socket import timeout
 from telegram.ext import Updater, MessageHandler,Filters
 
 #Funcion donde se reenvia el mensaje
 def process_message(update,context):
 
-    text = update.message.text
-    id_origin_chat= update.message.chat.id
+    message = update.channel_post.message_id
+    id_origin_chat= update.channel_post.chat.id
 
-    if str(id_origin_chat) == "-688891110":
-        context.bot.send_message(
-        chat_id = "-626626137",
-        text =  text
+    if str(id_origin_chat) == "-1001659970909":
+        context.bot.forward_message(
+        chat_id = -1001355916451,
+        from_chat_id = -1001659970909,
+        message_id = message
         )
 
 
 def run():
     #Donde colocar el token
-    updater = Updater(token="YOUR_TOKEN", use_context = True) 
+    updater = Updater(token="5076850110:AAGBNvfegBsPNCAS6Li5qvHHdzF9SCYjc0g", use_context = True) 
 
     #El dispacher para poder utilizar toda la informacion que pasa por el update
     dp = updater.dispatcher 
