@@ -3,12 +3,12 @@ from telegram.ext import Updater, MessageHandler,Filters
 #Funcion donde se reenvia el mensaje
 def process_message(update,context):
 
-    text = update.message.text
-    id_origin_chat= update.message.chat.id
-
-    if str(id_origin_chat) == "-688891110":
+    text = update.channel_post.text
+    id_origin_chat= update.channel_post.chat.id
+  
+    if str(id_origin_chat) == "-1001659970909":
         context.bot.send_message(
-        chat_id = "-626626137",
+        chat_id = "-1001355916451",
         text =  text
         )
 
