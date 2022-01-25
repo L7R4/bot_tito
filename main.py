@@ -8,7 +8,7 @@ def process_message(update,context):
     id_origin_chat= update.channel_post.chat.id
 
     if str(id_origin_chat) == "-1001659970909":
-        context.bot.forward_message(
+        context.bot.copy_message(
         chat_id = -1001355916451,
         from_chat_id = -1001659970909,
         message_id = message
@@ -17,7 +17,7 @@ def process_message(update,context):
 
 def run():
     #Donde colocar el token
-    updater = Updater(token="5076850110:AAGBNvfegBsPNCAS6Li5qvHHdzF9SCYjc0g", use_context = True) 
+    updater = Updater(token="YOUR_TOKEN", use_context = True)
 
     #El dispacher para poder utilizar toda la informacion que pasa por el update
     dp = updater.dispatcher 
